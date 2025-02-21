@@ -55,6 +55,20 @@ a {
   font-size: 3.8rem;
   line-height: 1.26;
 }
+.break-all {
+  word-break: break-all;
+}
+/* Nếu chữ của title với desc dài quá thì sẽ thành ... tùy theo hàng */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 2);
+  line-clamp: var(--line-clamp, 2);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
 /* ----------- Header --------- */
 .header {
   background-color: #fffcf4;
@@ -305,6 +319,7 @@ a {
   justify-content: space-between;
 }
 .popular .course-item .title a {
+  padding-right: 6px;
   color: #171100;
   font-size: 1.8rem;
   font-weight: 600;
